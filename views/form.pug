@@ -1,0 +1,32 @@
+extends layout 
+
+block content 
+  h1= title
+  a(
+    href='/'
+  ) Return home
+  br
+  br
+  form(
+    action='/new'
+    method='POST'
+  )
+    label(
+      for='author'
+    ) Author 
+    input(
+      type='text'
+      name='author'
+    )
+    br
+    label(
+      for='message'
+    ) Message 
+    textarea(
+      type='text'
+      name='message'
+    )
+    br
+    input(
+      type='submit'
+    )

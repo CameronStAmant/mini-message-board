@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcomed to #{title}
+  a(
+    href='/new'
+  ) Create a new post
+  ul 
+    each obj, index in message
+      li= 'Post ' + (index + 1) 
+        ul
+          each val, key in obj
+            li= key + ': ' + val
